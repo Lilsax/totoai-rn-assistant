@@ -50,6 +50,7 @@ Environment & Keys
   - Edit `src/config/env.ts` and add:
     - `GOOGLE_API_KEY`: Google Generative Language API key (embeddings)
     - `PINECONE_API_KEY`: Pinecone API key
+    - `PINECONE_HOST`: Your Pinecone index query endpoint URL
 - Alternatively, you can wire `.env` with `react-native-config` if preferred, but that requires native setup; this project uses `src/config/env.ts` for simplicity.
 
 Vector Database (RAG)
@@ -69,7 +70,10 @@ Permissions & Native Notes
 
 - Android: see `android/app/src/main/AndroidManifest.xml` for mic/storage/Internet permissions.
 - iOS: `ios/totoAi/Info.plist` includes mic/camera usage descriptions.
-- Firebase config files (`android/app/google-services.json`, `ios/GoogleService-Info.plist`) are included; these are app identifiers, not secrets, and are commonly committed for mobile apps.
+- Firebase config files are NOT committed:
+  - Add your own `android/app/google-services.json` locally (see `android/app/google-services.json.example`).
+  - Add your own `ios/GoogleService-Info.plist` locally (see `ios/GoogleService-Info.plist.example`).
+  - Both paths are ignored via `.gitignore` to keep configs out of the public repo.
 
 Project Scripts
 
