@@ -1,0 +1,23 @@
+{
+    "type": "Bottom Tab Navigator",
+    "screens": [
+      {
+        "name": "Dashboard",
+        "route": "Dashboard",
+        "description": "Main banking dashboard with credit cards, stats, transactions, and AI chat popup",
+        "keywords": ["dashboard", "banking", "credit cards", "transactions", "stats", "balance", "chat", "ai", "assistant", "saudi", "sar", "riyal", "popup", "carousel"]
+      },
+      {
+        "name": "Settings",
+        "route": "Settings",
+        "description": "App settings, preferences, and account management",
+        "keywords": ["settings", "preferences", "configuration", "options", "app", "account", "privacy", "support", "security", "notifications", "dark mode", "biometric", "logout"]
+      },
+      {
+        "name": "Profile",
+        "route": "Profile",
+        "description": "User profile information, account details, and quick actions",
+        "keywords": ["profile", "account", "personal", "information", "balance", "transactions", "savings", "goal", "security", "support", "user", "details", "stats", "actions"]
+      }
+    ]
+  }

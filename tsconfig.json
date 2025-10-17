@@ -1,0 +1,14 @@
+{
+  "extends": "@react-native/typescript-config",
+  "include": ["**/*.ts", "**/*.tsx", "SimpleAppGuide.js"],
+  "exclude": ["**/node_modules", "**/Pods"],
+  "compilerOptions": {
+    "jsx": "react",
+    "types": ["node"],
+    "baseUrl": ".", 
+    "paths": {
+      "@utils/*": ["src/utils/*"],
+      "srcs/*": ["src/*"]
+    }
+  }
+}

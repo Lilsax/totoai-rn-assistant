@@ -1,0 +1,38 @@
+{
+    "fetchAccountBalance": {
+    "function": "fetchAccountBalance",
+    "description": "Fetch current account balance for user",
+    "params": ["accountId"],
+    "returns": "balance object with amount and currency"
+    },
+    "fetchTransactionHistory": {
+    "function": "fetchTransactionHistory",
+    "description": "Get user transaction history",
+    "params": ["accountId", "limit", "dateRange"],
+    "returns": "array of transaction objects"
+    },
+    "initiateTransfer": {
+    "function": "initiateTransfer",
+    "description": "Transfer money between accounts",
+    "params": ["fromAccount", "toAccount", "amount"],
+    "returns": "transfer confirmation object"
+    },
+    "fetchCardDetails": {
+    "function": "fetchCardDetails",
+    "description": "Get user's card information",
+    "params": ["cardId"],
+    "returns": "card object with details and balance"
+    },
+    "updateUserProfile": {
+    "function": "updateUserProfile",
+    "description": "Update user profile information",
+    "params": ["userId", "profileData"],
+    "returns": "updated profile object"
+    },
+    "fetchCreditCards": {
+    "function": "fetchCreditCards",
+    "description": "get user credit cards",
+    "params": [],
+    "returns": "return list of credit cards"
+    }
+}

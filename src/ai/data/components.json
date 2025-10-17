@@ -1,0 +1,25 @@
+{
+  "card": {
+    "component": "CreditCard",
+    "description": "Displays user's credit/debit card with card details, balance, and visual card design",
+    "category": "card_management", 
+    "keywords": [
+      "card", "credit card", "debit card", "card balance", "card details", 
+      "card number", "card holder", "expiry", "visa", "mastercard", "amex",
+      "available balance", "card display", "banking card"
+    ], 
+    "props": [
+      "card", 
+      "style" 
+    ], 
+    "usage": "Display user's credit/debit card with balance and card information",
+    "cardDataStructure": {
+      "cardType": "string (visa|mastercard|amex)",
+      "cardNumber": "string (card number)",
+      "cardholderName": "string (cardholder name)",
+      "expiryDate": "string (MM/YY format)",
+      "balance": "number (available balance)",
+      "backgroundColor": "string (card background color)"
+    }
+  }
+}

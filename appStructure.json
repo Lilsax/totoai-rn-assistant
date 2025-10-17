@@ -1,0 +1,439 @@
+{
+  "appInfo": {
+    "name": "TotoAI Saudi Banking Assistant (مساعد البنوك السعودي)",
+    "version": "1.0.0",
+    "buildNumber": "2024.08.23",
+    "developer": "TotoAI Team فريق توتو",
+    "supportEmail": "support@totoai.sa",
+    "description": "AI-powered Saudi banking assistant with chat interface, credit card management, and Islamic banking features"
+  },
+  "navigation": {
+    "type": "Bottom Tab Navigator",
+    "screens": [
+      {
+        "name": "Dashboard",
+        "route": "Dashboard",
+        "description": "Main banking dashboard with credit cards, stats, transactions, and AI chat popup",
+        "components": [
+          {
+            "name": "CreditCardsCarousel",
+            "description": "Horizontal scrollable carousel of user's credit cards",
+            "fields": [
+              {
+                "name": "creditCards",
+                "type": "CreditCardData[]",
+                "description": "Array of user's credit cards with Saudi names",
+                "keywords": ["cards", "credit", "debit", "carousel", "horizontal", "scroll", "banking", "saudi"]
+              }
+            ],
+            "keywords": ["credit", "cards", "carousel", "horizontal", "scroll", "banking", "saudi", "al-rajhi", "samba", "riyadh bank"]
+          },
+          {
+            "name": "QuickStats",
+            "description": "Grid of financial overview statistics",
+            "fields": [
+              {
+                "name": "quickStats",
+                "type": "QuickStat[]",
+                "description": "Financial statistics like balance, transactions, savings",
+                "keywords": ["stats", "statistics", "balance", "transactions", "savings", "overview", "financial", "sar"]
+              }
+            ],
+            "keywords": ["stats", "statistics", "balance", "overview", "financial", "grid", "quick", "sar", "riyal"]
+          },
+          {
+            "name": "RecentTransactions",
+            "description": "List of recent banking transactions",
+            "fields": [
+              {
+                "name": "recentTransactions",
+                "type": "Transaction[]",
+                "description": "Recent banking transactions with Saudi context",
+                "keywords": ["transactions", "recent", "history", "banking", "payments", "transfers", "saudi", "sar"]
+              }
+            ],
+            "actions": [
+              {
+                "name": "seeAllTransactions",
+                "description": "Navigate to full transaction history",
+                "keywords": ["see all", "view all", "transactions", "history", "complete", "full"]
+              }
+            ],
+            "keywords": ["transactions", "recent", "history", "payments", "transfers", "banking", "saudi"]
+          },
+          {
+            "name": "QuickActions",
+            "description": "Grid of quick action buttons for common banking tasks",
+            "actions": [
+              {
+                "name": "viewBalance",
+                "keywords": ["balance", "account", "view", "check", "current", "money", "sar"]
+              },
+              {
+                "name": "transferMoney",
+                "keywords": ["transfer", "send", "money", "payment", "wire", "banking", "sar"]
+              },
+              {
+                "name": "viewTransactionHistory",
+                "keywords": ["transaction", "history", "view", "past", "records", "banking"]
+              },
+              {
+                "name": "openSettings",
+                "keywords": ["settings", "preferences", "configure", "manage", "account"]
+              }
+            ],
+            "keywords": ["quick", "actions", "buttons", "banking", "tasks", "balance", "transfer", "settings"]
+          },
+          {
+            "name": "ChatPopup",
+            "description": "AI chat assistant popup overlay with Saudi banking context",
+            "fields": [
+              {
+                "name": "isChatVisible",
+                "type": "boolean",
+                "description": "Controls chat popup visibility",
+                "keywords": ["chat", "visible", "popup", "overlay", "show", "hide", "toggle"]
+              },
+              {
+                "name": "userInput",
+                "type": "string",
+                "description": "User message input field",
+                "keywords": ["message", "input", "text", "prompt", "question", "query", "chat", "type", "send"]
+              },
+              {
+                "name": "chatHistory",
+                "type": "ChatMessage[]",
+                "description": "Array of chat messages between user and AI",
+                "keywords": ["chat", "history", "conversation", "messages", "dialogue", "thread", "log"]
+              }
+            ],
+            "actions": [
+              {
+                "name": "toggleChat",
+                "description": "Show or hide the chat popup",
+                "keywords": ["toggle", "show", "hide", "chat", "popup", "open", "close"]
+              },
+              {
+                "name": "sendMessage",
+                "description": "Send message to AI assistant",
+                "keywords": ["send", "message", "chat", "ai", "assistant", "banking", "help"]
+              }
+            ],
+            "keywords": ["chat", "popup", "ai", "assistant", "banking", "overlay", "gemini", "saudi", "customer service"]
+          }
+        ],
+        "keywords": ["dashboard", "banking", "credit cards", "transactions", "stats", "balance", "chat", "ai", "assistant", "saudi", "sar", "riyal", "popup", "carousel"]
+      },
+      {
+        "name": "Settings",
+        "route": "Settings",
+        "description": "App settings, preferences, and account management",
+        "components": [
+          {
+            "name": "SettingsList",
+            "description": "Comprehensive settings interface with sections",
+            "sections": [
+              {
+                "name": "App Information",
+                "fields": [
+                  {
+                    "name": "appName",
+                    "value": "TotoAI Saudi Banking Assistant (مساعد البنوك السعودي)",
+                    "keywords": ["app", "name", "title", "application", "banking", "assistant", "totoai", "saudi", "arabic"]
+                  },
+                  {
+                    "name": "version",
+                    "value": "1.0.0",
+                    "keywords": ["version", "build", "release", "number", "update"]
+                  },
+                  {
+                    "name": "buildNumber",
+                    "value": "2024.08.23",
+                    "keywords": ["build", "number", "date", "release", "version"]
+                  },
+                  {
+                    "name": "developer",
+                    "value": "TotoAI Team فريق توتو",
+                    "keywords": ["developer", "team", "creator", "company", "totoai", "saudi", "arabic"]
+                  },
+                  {
+                    "name": "supportEmail",
+                    "value": "support@totoai.sa",
+                    "keywords": ["support", "email", "contact", "help", "assistance", "customer service", "saudi"]
+                  }
+                ],
+                "keywords": ["app", "information", "details", "version", "developer", "support", "contact"]
+              },
+              {
+                "name": "Preferences",
+                "fields": [
+                  {
+                    "name": "notificationsEnabled",
+                    "type": "boolean",
+                    "default": true,
+                    "keywords": ["notifications", "push", "alerts", "messages", "enable", "disable", "settings"]
+                  },
+                  {
+                    "name": "darkModeEnabled",
+                    "type": "boolean",
+                    "default": false,
+                    "keywords": ["dark", "mode", "theme", "appearance", "night", "light", "color scheme"]
+                  },
+                  {
+                    "name": "autoSaveEnabled",
+                    "type": "boolean",
+                    "default": true,
+                    "keywords": ["auto", "save", "automatic", "backup", "chat", "history", "preserve"]
+                  },
+                  {
+                    "name": "biometricEnabled",
+                    "type": "boolean",
+                    "default": false,
+                    "keywords": ["biometric", "fingerprint", "face", "id", "touch", "security", "login"]
+                  }
+                ],
+                "keywords": ["preferences", "settings", "options", "configuration", "personalization", "customization"]
+              },
+              {
+                "name": "Data & Privacy",
+                "actions": [
+                  {
+                    "name": "privacyPolicy",
+                    "keywords": ["privacy", "policy", "terms", "legal", "data", "protection", "gdpr"]
+                  },
+                  {
+                    "name": "termsOfService",
+                    "keywords": ["terms", "service", "conditions", "legal", "agreement", "contract"]
+                  },
+                  {
+                    "name": "dataUsage",
+                    "keywords": ["data", "usage", "analytics", "tracking", "privacy", "information"]
+                  },
+                  {
+                    "name": "clearChatHistory",
+                    "keywords": ["clear", "delete", "remove", "chat", "history", "conversation", "data"]
+                  }
+                ],
+                "keywords": ["data", "privacy", "security", "legal", "terms", "policy", "clear", "delete"]
+              },
+              {
+                "name": "Support",
+                "actions": [
+                  {
+                    "name": "helpCenter",
+                    "keywords": ["help", "center", "support", "assistance", "guide", "tutorial", "faq"]
+                  },
+                  {
+                    "name": "contactSupport",
+                    "keywords": ["contact", "support", "help", "assistance", "customer service", "email"]
+                  },
+                  {
+                    "name": "reportBug",
+                    "keywords": ["report", "bug", "issue", "problem", "error", "feedback", "technical"]
+                  },
+                  {
+                    "name": "rateApp",
+                    "keywords": ["rate", "review", "app", "store", "feedback", "rating", "stars"]
+                  }
+                ],
+                "keywords": ["support", "help", "assistance", "contact", "report", "bug", "rate", "feedback"]
+              },
+              {
+                "name": "Account",
+                "actions": [
+                  {
+                    "name": "profileSettings",
+                    "keywords": ["profile", "settings", "account", "personal", "information", "edit"]
+                  },
+                  {
+                    "name": "securitySettings",
+                    "keywords": ["security", "settings", "password", "authentication", "protection", "safety"]
+                  },
+                  {
+                    "name": "connectedDevices",
+                    "keywords": ["connected", "devices", "sessions", "login", "security", "management"]
+                  },
+                  {
+                    "name": "logout",
+                    "keywords": ["logout", "sign out", "exit", "log off", "disconnect", "session"]
+                  }
+                ],
+                "keywords": ["account", "profile", "security", "devices", "logout", "settings", "management"]
+              }
+            ],
+            "keywords": ["settings", "preferences", "configuration", "options", "app", "account", "privacy", "support", "security"]
+          }
+        ],
+        "keywords": ["settings", "preferences", "configuration", "options", "app", "account", "privacy", "support", "security", "notifications", "dark mode", "biometric", "logout"]
+      },
+      {
+        "name": "Profile",
+        "route": "Profile",
+        "description": "User profile information, account details, and quick actions",
+        "components": [
+          {
+            "name": "ProfileHeader",
+            "description": "User profile header with avatar and basic info",
+            "fields": [
+              {
+                "name": "profileImage",
+                "type": "string|null",
+                "description": "User profile picture URL or null for initials",
+                "keywords": ["profile", "picture", "avatar", "photo", "image", "photo", "picture"]
+              },
+              {
+                "name": "userName",
+                "value": "أحمد العلي (Ahmed Al-Ali)",
+                "keywords": ["name", "user", "full name", "display name", "profile name", "saudi", "arabic"]
+              },
+              {
+                "name": "userEmail",
+                "value": "ahmed.alali@saudibank.com",
+                "keywords": ["email", "mail", "address", "contact", "communication", "saudi"]
+              },
+              {
+                "name": "accountType",
+                "value": "حساب مميز Premium Banking",
+                "keywords": ["account", "type", "premium", "banking", "plan", "tier", "level", "saudi", "arabic"]
+              }
+            ],
+            "actions": [
+              {
+                "name": "editProfile",
+                "keywords": ["edit", "profile", "modify", "change", "update", "personal information"]
+              },
+              {
+                "name": "editImage",
+                "keywords": ["edit", "image", "photo", "picture", "avatar", "profile picture", "camera"]
+              }
+            ],
+            "keywords": ["profile", "header", "avatar", "name", "email", "account", "edit", "picture"]
+          },
+          {
+            "name": "AccountStats",
+            "description": "Account overview with financial statistics",
+            "fields": [
+              {
+                "name": "totalBalance",
+                "value": "95,431.50 ريال (SAR)",
+                "keywords": ["balance", "total", "money", "account", "funds", "amount", "sar", "riyal", "saudi"]
+              },
+              {
+                "name": "monthlyTransactions",
+                "value": "47 معاملة",
+                "keywords": ["transactions", "monthly", "count", "number", "activity", "movements", "saudi", "arabic"]
+              },
+              {
+                "name": "savingsGoal",
+                "value": "187,500 ريال (SAR 50,000)",
+                "keywords": ["savings", "goal", "target", "objective", "amount", "money", "target", "sar", "riyal"]
+              },
+              {
+                "name": "savingsProgress",
+                "value": "65% مكتمل",
+                "keywords": ["progress", "percentage", "savings", "goal", "achievement", "completion", "saudi", "arabic"]
+              }
+            ],
+            "keywords": ["account", "stats", "statistics", "balance", "transactions", "savings", "goal", "progress"]
+          },
+          {
+            "name": "PersonalInfo",
+            "description": "Detailed personal and account information",
+            "fields": [
+              {
+                "name": "fullName",
+                "value": "أحمد محمد العلي (Ahmed Mohammed Al-Ali)",
+                "keywords": ["full name", "name", "user", "personal", "identity", "saudi", "arabic"]
+              },
+              {
+                "name": "email",
+                "value": "ahmed.alali@saudibank.com",
+                "keywords": ["email", "mail", "address", "contact", "communication", "saudi"]
+              },
+              {
+                "name": "phone",
+                "value": "+966 55 123 4567",
+                "keywords": ["phone", "telephone", "number", "mobile", "contact", "call", "saudi", "966"]
+              },
+              {
+                "name": "accountNumber",
+                "value": "**** **** **** 4321 (Al-Rajhi Bank)",
+                "keywords": ["account", "number", "card", "masked", "hidden", "security", "banking", "al-rajhi", "saudi"]
+              },
+              {
+                "name": "memberSince",
+                "value": "يناير 2023 (January 2023)",
+                "keywords": ["member", "since", "joined", "date", "registration", "start", "saudi", "arabic"]
+              },
+              {
+                "name": "lastLogin",
+                "value": "اليوم 2:30 مساءً (Today at 2:30 PM)",
+                "keywords": ["last", "login", "access", "time", "date", "recent", "activity", "saudi", "arabic"]
+              },
+              {
+                "name": "status",
+                "value": "نشط (Active)",
+                "keywords": ["status", "active", "state", "condition", "account", "status", "saudi", "arabic"]
+              }
+            ],
+            "keywords": ["personal", "information", "details", "account", "contact", "status", "member", "login"]
+          },
+          {
+            "name": "QuickActions",
+            "description": "Quick action buttons for common tasks",
+            "actions": [
+              {
+                "name": "viewTransactions",
+                "keywords": ["view", "transactions", "history", "activity", "movements", "records"]
+              },
+              {
+                "name": "changePassword",
+                "keywords": ["change", "password", "security", "authentication", "login", "credentials"]
+              },
+              {
+                "name": "securitySettings",
+                "keywords": ["security", "settings", "protection", "safety", "authentication", "privacy"]
+              },
+              {
+                "name": "contactSupport",
+                "keywords": ["contact", "support", "help", "assistance", "customer service", "help"]
+              }
+            ],
+            "keywords": ["quick", "actions", "buttons", "tasks", "transactions", "password", "security", "support"]
+          }
+        ],
+        "keywords": ["profile", "account", "personal", "information", "balance", "transactions", "savings", "goal", "security", "support", "user", "details", "stats", "actions"]
+      }
+    ]
+  },
+  "features": {
+    "ai": {
+      "model": "gemini-2.5-flash",
+      "provider": "Firebase AI",
+      "capabilities": ["chat", "Saudi banking assistance", "Islamic banking guidance", "customer service", "Arabic language support"],
+      "keywords": ["ai", "artificial intelligence", "gemini", "firebase", "chat", "assistant", "banking", "customer service", "saudi", "islamic", "arabic"]
+    },
+    "navigation": {
+      "type": "Bottom Tab Navigation",
+      "deepLinking": {
+        "scheme": "totoai://",
+        "universalLinks": "https://totoai.com",
+        "keywords": ["deep", "linking", "url", "scheme", "universal", "links", "navigation"]
+      },
+      "keywords": ["navigation", "tabs", "bottom", "tabs", "screens", "routing", "deep linking"]
+    },
+    "chat": {
+      "features": ["markdown support", "message history", "Saudi banking context", "navigation assistance", "popup overlay"],
+      "keywords": ["chat", "conversation", "messages", "history", "markdown", "popup", "banking", "saudi", "navigation"]
+    },
+    "banking": {
+      "features": ["credit card management", "transaction history", "balance overview", "Islamic banking compliance", "Saudi Riyal (SAR) support"],
+      "keywords": ["banking", "credit cards", "transactions", "balance", "islamic", "sharia", "sar", "riyal", "saudi"]
+    }
+  },
+  "keywords": ["totoai", "saudi", "banking", "assistant", "ai", "chat", "profile", "settings", "dashboard", "gemini", "firebase", "react native", "mobile", "app", "customer service", "support", "account", "transactions", "balance", "savings", "security", "privacy", "notifications", "dark mode", "biometric", "deep linking", "navigation", "markdown", "popup", "credit cards", "carousel", "islamic", "sharia", "sar", "riyal", "arabic"]
+}
+
+
+
+
